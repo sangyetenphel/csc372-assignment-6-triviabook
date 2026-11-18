@@ -2,7 +2,7 @@
 
 A Node.js/Express REST API connected to a Neon PostgreSQL database. This API serves trivia questions, topics, and allows users to check answers or add new questions.
 
-**Live Deployment:** [Live URL Pending - Update after Render deployment]
+**Live Deployment:** [https://triviabook-api.onrender.com/triviabook/topics](https://triviabook-api.onrender.com/triviabook/topics)
 
 ## Database Schema
 
