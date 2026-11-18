@@ -31,3 +31,22 @@ The database consists of two tables:
    ```env
    DATABASE_URL=postgresql://your-neon-connection-string
    PORT=3000
+   ```
+4. Run the seed script to create tables and populate initial data:
+   ```bash
+   npm run seed
+   ```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## API Endpoints
+
+| Method | Endpoint | Description | Parameters / Body |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/triviabook/topics` | Get a list of all trivia topics. | None |
+| `GET` | `/triviabook/topic/:topic` | Get questions for a specific topic. | Optional query params: `?limit=5&difficulty=easy` |
+| `GET` | `/triviabook/random` | Get a random question (does not include answer). | None |
+| `POST` | `/triviabook/answer` | Check if a guess is correct. | JSON: `{ "id": 1, "guess": "Mars" }` |
+| `POST` | `/triviabook/question/add` | Add a new question (creates topic if it doesn't exist). | JSON: `{ "topic": "history", "question": "Who...?", "answer": "Someone", "difficulty": "easy" }` |
